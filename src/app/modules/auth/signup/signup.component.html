@@ -1,0 +1,45 @@
+<div class="bg">
+  <div class="parent">
+    <div class="child">
+      <div nz-row class="imgDiv">
+        <div nz-col nzSpan="24">
+          <h1 class="form-title">Create Account</h1>
+        </div>
+      </div>
+
+      <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+        <nz-form-item>
+          <nz-form-control nzHasFeedback nzErrorTip="Please enter a valid E-mail!">
+            <nz-input-group nzPrefixIcon="user">
+            <input nz-input placeholder="Enter your E-mail" formControlName="email" id="email" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-control nzHasFeedback nzErrorTip="Please enter a valid Password!">
+            <nz-input-group nzPrefixIcon="lock">
+            <input nz-input placeholder="Enter your Password" type="password" id="password" formControlName="password" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-control nzHasFeedback nzErrorTip="Please enter a valid Name!">
+            <nz-input-group nzPrefixIcon="user">
+            <input nz-input placeholder="Enter your Name" formControlName="name" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">
+          Sign Up
+        </button>
+        <p class="redirect-text">
+          Already have an account?
+          <a routerLink="/login">Login here</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>

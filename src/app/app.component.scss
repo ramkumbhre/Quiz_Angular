@@ -1,0 +1,109 @@
+$primary-color: #003973;
+$secondary-color: #141a33;
+$highlight-color: #F48023;
+$white: #ffffff;
+$hover-bg: rgba(255, 255, 255, 0.08);
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  height: 70px;
+  background: linear-gradient(135deg, $primary-color, $secondary-color);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .logo a {
+    font-size: 24px;
+    font-weight: 700;
+    color: $white;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $highlight-color;
+      transform: scale(1.05);
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 18px;
+
+    a {
+      font-weight: 500;
+      font-size: 16px;
+      color: $white;
+      padding: 8px 20px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      position: relative;
+
+      &.active {
+        background: $highlight-color;
+        color: $white;
+        box-shadow: 0 4px 12px rgba($highlight-color, 0.4);
+      }
+
+      &:hover {
+        background: $hover-bg;
+        color: $highlight-color;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 0%;
+        height: 2px;
+        background: $highlight-color;
+        transition: width 0.3s;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      &:hover:after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: linear-gradient(135deg, #003973, #141a33);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Add spacing so content is not hidden behind navbar */
+body {
+  padding-top: 70px; // same as navbar height
+}
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .main-header {
+    padding: 0 20px;
+
+    .nav-links {
+      gap: 10px;
+
+      a {
+        padding: 6px 12px;
+        font-size: 14px;
+      }
+    }
+  }
+}
