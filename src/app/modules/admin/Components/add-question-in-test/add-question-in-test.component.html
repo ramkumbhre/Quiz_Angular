@@ -1,0 +1,77 @@
+<div class="bg">
+  <div class="form-card">
+    <h2 class="form-title">Add New Question</h2>
+
+    <form nz-form [formGroup]="questionForm" class="question-form" (ngSubmit)="submitForm()">
+      <!-- Question title -->
+      <div class="field">
+        <label class="field-label">Question Title</label>
+        <nz-form-item>
+          <nz-form-control nzErrorTip="This input is required!">
+            <input nz-input type="text" formControlName="questionText" placeholder="Enter your question here" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+
+      <!-- 2x2 Options grid -->
+      <div class="options-grid">
+        <div class="field">
+          <label class="field-label">Option A</label>
+          <nz-form-item>
+            <nz-form-control nzErrorTip="This input is required!">
+              <input nz-input type="text" formControlName="optionA" placeholder="Enter Option A" />
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+
+        <div class="field">
+          <label class="field-label">Option B</label>
+          <nz-form-item>
+            <nz-form-control nzErrorTip="This input is required!">
+              <input nz-input type="text" formControlName="optionB" placeholder="Enter Option B" />
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+
+        <div class="field">
+          <label class="field-label">Option C</label>
+          <nz-form-item>
+            <nz-form-control nzErrorTip="This input is required!">
+              <input nz-input type="text" formControlName="optionC" placeholder="Enter Option C" />
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+
+        <div class="field">
+          <label class="field-label">Option D</label>
+          <nz-form-item>
+            <nz-form-control nzErrorTip="This input is required!">
+              <input nz-input type="text" formControlName="optionD" placeholder="Enter Option D" />
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+
+      <!-- Correct option -->
+      <div class="field">
+        <label class="field-label">Correct Option</label>
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Please select correct option">
+            <!-- using nz-select for nice styling with ng-zorro -->
+            <nz-select formControlName="correctOption" nzPlaceHolder="Select correct option" class="full-width-select">
+                 <nz-option [nzValue]="questionForm.get('optionA')?.value" nzLabel="Option A"></nz-option>
+                 <nz-option [nzValue]="questionForm.get('optionB')?.value" nzLabel="Option B"></nz-option>
+                 <nz-option [nzValue]="questionForm.get('optionC')?.value" nzLabel="Option C"></nz-option>
+                 <nz-option [nzValue]="questionForm.get('optionD')?.value" nzLabel="Option D"></nz-option>
+            </nz-select>
+
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+
+      <div class="btn-row">
+        <button nz-button nzType="primary" class="submit-btn" [disabled]="questionForm.invalid">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

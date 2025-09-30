@@ -1,0 +1,34 @@
+<div class="bg">
+<!-- <div class="results-dashboard"> -->
+  <div class="results-table-container">
+    <nz-table #basicTable [nzData]="resultsData" nzBordered nzSize="middle" [nzBordered]="false">
+      <thead>
+        <tr>
+          <th>Test Name</th>
+          <th>User Name</th>
+          <th class="text-center">Total Questions</th>
+          <th class="text-center">Correct Answers</th>
+          <th class="text-center">Percentage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of basicTable.data">
+          <td>{{ data.testName }}</td>
+          <td>{{ data.userName }}</td>
+          <td class="text-center">{{ data.totalQuestions }}</td>
+          <td class="text-center">{{ data.correctAnswers }}</td>
+          <td class="text-center">
+            <span [ngClass]="{
+              'percent-high': data.percentage >= 75,
+              'percent-medium': data.percentage >= 50 && data.percentage < 75,
+              'percent-low': data.percentage < 50
+            }" class="percent-badge">
+              {{ data.percentage }}%
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </nz-table>
+  </div>
+<!-- </div> -->
+</div>

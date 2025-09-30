@@ -1,0 +1,107 @@
+.bg {
+  background: linear-gradient(135deg, #003973, #e5e5be);
+  width: 100%;
+   height: auto;
+  min-height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+  padding: 60px;
+}
+
+// .results-dashboard {
+//   padding: 20px;
+//   background: #f4f8fc;
+//   min-height: 100vh;
+//   font-family: 'Segoe UI', sans-serif;
+  
+// }
+
+/* Table container with card look */
+.results-table-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  overflow: hidden;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+/* Table header */
+thead th {
+  background: linear-gradient(90deg, #1a75ff, #4da6ff) !important;
+  font-weight: bold;
+  color: white !important;
+  text-align: center;
+  font-size: 15px;
+  padding: 12px;
+}
+
+/* Table body */
+tbody td {
+  padding: 12px;
+  font-size: 14px;
+  color: #333;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9fcff;
+}
+
+tbody tr:hover {
+  background-color: #eaf3ff;
+  transition: background 0.25s ease;
+}
+
+/* Text alignment helper */
+.text-center {
+  text-align: center;
+}
+
+/* Percentage badge styles */
+.percent-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 13px;
+  min-width: 60px;
+}
+
+.percent-high {
+  background: #e6f9ec;
+  color: #28a745;
+}
+
+.percent-medium {
+  background: #fff3e0;
+  color: #ff9800;
+}
+
+.percent-low {
+  background: #fdecea;
+  color: #e53935;
+}
+
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive scrolling on small screens */
+@media (max-width: 768px) {
+  .results-table-container {
+    overflow-x: auto;
+  }
+
+  nz-table {
+    min-width: 600px; /* ensures scroll instead of breaking */
+  }
+}

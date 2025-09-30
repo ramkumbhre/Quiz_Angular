@@ -1,0 +1,33 @@
+<div class="bg">
+<div style="margin: auto; width: 80%; max-width: 800px;">
+    <form>
+        <div class="question" *ngFor="let question of questions">
+            <h3 class="question-title">{{ question.questionText }}</h3>
+
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="question{{ question.id }}" />
+                    <span>{{question.optionA}}</span>
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="question{{ question.id }}" />
+                    <span>{{question.optionB}}</span>
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="question{{ question.id }}" />
+                    <span>{{question.optionC}}</span>
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="question{{ question.id }}" />
+                    <span>{{question.optionD}}</span>
+                </label>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</div>
+</div>

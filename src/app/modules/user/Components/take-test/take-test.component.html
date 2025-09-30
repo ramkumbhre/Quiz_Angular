@@ -1,0 +1,44 @@
+<div class="bg">
+     <div class="timer-container">
+        <div class="timer">
+          Time remaining: <span class="time">{{ getFormattedTime() }}</span>
+        </div>
+    </div>
+<div style="margin: auto; width: 80%; max-width: 800px;">
+   
+
+    <form (ngSubmit)="submitAnswers()">
+        <div class="question" *ngFor="let question of questions">
+            <h3 class="question-title">{{ question.questionText }}</h3>
+
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="question{{ question.id }}" 
+                    (change)="onAnswerChange(question.id, question.optionA)"/>
+                    <span>{{question.optionA}}</span>
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="question{{ question.id }}" 
+                    (change)="onAnswerChange(question.id, question.optionB)"/>
+                    <span>{{question.optionB}}</span>
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="question{{ question.id }}" 
+                    (change)="onAnswerChange(question.id, question.optionC)"/>
+                    <span>{{question.optionC}}</span>
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="question{{ question.id }}" 
+                    (change)="onAnswerChange(question.id, question.optionD)"/>
+                    <span>{{question.optionD}}</span>
+                </label>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Answers</button>
+    </form>
+</div>
+</div>

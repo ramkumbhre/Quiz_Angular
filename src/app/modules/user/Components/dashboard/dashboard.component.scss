@@ -1,0 +1,50 @@
+.bg {
+  background: linear-gradient(135deg, #003973, #e5e5be);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.main {
+  padding: 30px;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+.test {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 20px;
+}
+
+.test:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 57, 115, 0.2) 0px 8px 30px;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+button[nz-button] {
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
