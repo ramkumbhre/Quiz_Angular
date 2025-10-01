@@ -4,12 +4,13 @@
     <nz-table #basicTable [nzData]="resultsData" nzBordered nzSize="middle" [nzBordered]="false">
       <thead>
         <tr>
-          <th>Test Name</th>
-          <th>User Name</th>
-          <th class="text-center">Total Questions</th>
-          <th class="text-center">Correct Answers</th>
-          <th class="text-center">Percentage</th>
+            <th style="font-weight: bold;">Test Name</th>
+            <th style="font-weight: bold;">User Name</th>
+            <th class="text-center" style="font-weight: bold;">Total Questions</th>
+            <th class="text-center" style="font-weight: bold;">Correct Answers</th>
+            <th class="text-center" style="font-weight: bold;">Percentage</th>
         </tr>
+
       </thead>
       <tbody>
         <tr *ngFor="let data of basicTable.data">

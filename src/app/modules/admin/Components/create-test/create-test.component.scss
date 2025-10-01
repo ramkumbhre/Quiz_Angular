@@ -1,7 +1,8 @@
 .bg {
   background: linear-gradient(135deg, #003973, #e5e5be);
   width: 100%;
-  height: 100vh;
+   height: auto;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,14 +64,16 @@ textarea[nz-input]:focus {
   outline: none;
 }
 
-.btn-wrapper {
-  margin-top: 20px;
-}
+// .btn-wrapper {
+//   margin-top: 20px;
+  // margin-bottom: 20px;
+// }
 
 
 .submit-btn {
-  width: 100%;
-  padding: 14px;
+  width: 40%;
+  float: right;
+  padding: 1px 20px;
   font-size: 15px;
   font-weight: 700;
   border-radius: 10px;

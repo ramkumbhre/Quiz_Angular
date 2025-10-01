@@ -1,0 +1,73 @@
+.bg {
+  background: linear-gradient(135deg, #003973, #e5e5be);
+  width: 100%;
+   height: auto;
+  min-height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+  padding: 60px;
+}
+
+.result-dashboard {
+  padding: 20px;
+  background: #f5f7fa;
+  min-height: 100vh;
+  border-radius: 12px;
+  animation: fadeIn 0.7s ease-in-out;
+
+  .dashboard-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+
+  .result-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  .result-table {
+    width: 100%;
+
+    th {
+      font-weight: 600;
+      background: #fafafa;
+    }
+
+    td {
+      padding: 10px;
+    }
+  }
+
+  /* Percentage styling */
+  .high-score {
+    color: #52c41a; /* green */
+    font-weight: bold;
+  }
+
+  .medium-score {
+    color: #fa8c16; /* orange */
+    font-weight: bold;
+  }
+
+  .low-score {
+    color: #f5222d; /* red */
+    font-weight: bold;
+  }
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

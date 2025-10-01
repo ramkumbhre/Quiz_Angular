@@ -70,6 +70,9 @@ export class TakeTestComponent {
 
 
   submitAnswers(){
+    clearInterval(this.interval);
+     this.interval = null;
+
     const answerList = Object.keys(this.selectedAnswers).map(questionId=>{
       return{
         questionId: +questionId,
@@ -89,7 +92,8 @@ export class TakeTestComponent {
         `Test submited successfully`,
         {nzDuration: 5000}
       );
-      this.router.navigateByUrl("/user/view-test-results");
+      
+      this.router.navigateByUrl("/user/view-test-result");
     }, error=>{
       this.message
       .error(

@@ -1,0 +1,44 @@
+<div class="bg">
+<div class="result-dashboard">
+  <h2 class="dashboard-title">📊 Student Test Results</h2>
+
+  <nz-card nzBordered="true" class="result-card">
+    <nz-table
+      #basicTable
+      [nzData]="dataSet"
+      [nzBordered]="true"
+      [nzSize]="'middle'"
+      [nzBordered]="true"
+      [nzScroll]="{ x: '600px' }"
+      class="result-table"
+    >
+      <thead>
+        <tr>
+          <th>Test Name</th>
+          <th class="text-center">Total Questions</th>
+          <th class="text-center">Correct Answers</th>
+          <th class="text-center">Percentage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of basicTable.data">
+          <td>{{ data.testName }}</td>
+          <td class="text-center">{{ data.totalQuestions }}</td>
+          <td class="text-center">{{ data.correctAnswers }}</td>
+          <td class="text-center">
+            <span
+              [ngClass]="{
+                'high-score': data.percentage >= 70,
+                'medium-score': data.percentage >= 40 && data.percentage < 70,
+                'low-score': data.percentage < 40
+              }"
+            >
+              {{ data.percentage }}%
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </nz-table>
+  </nz-card>
+</div>
+</div>
