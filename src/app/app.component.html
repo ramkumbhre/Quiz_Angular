@@ -1,5 +1,5 @@
 <div *ngIf="!isUserLoggedIn && !isAdminLoggedIn">
-<nz-header class="main-header " nz-row nzType="flex">
+<nz-header class="main-header sticky-header" nz-row nzType="flex">
   <div class="logo">
     <a routerLink="/">Quiz App</a>
   </div>
@@ -12,7 +12,7 @@
 
 
 <div *ngIf="isAdminLoggedIn">
-<nz-header class="main-header " nz-row nzType="flex">
+<nz-header class="main-header sticky-header" nz-row nzType="flex">
   <div class="logo">
     <a routerLink="/" (click)="logout()">Quiz App</a>
   </div>
@@ -27,7 +27,7 @@
 
 
 <div *ngIf="isUserLoggedIn">
-<nz-header class="main-header " nz-row nzType="flex">
+<nz-header class="main-header sticky-header" nz-row nzType="flex">
   <div class="logo">
     <a routerLink="/" (click)="logout()">Quiz App</a>
   </div>

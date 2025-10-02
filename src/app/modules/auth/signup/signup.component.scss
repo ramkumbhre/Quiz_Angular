@@ -1,11 +1,15 @@
 .bg {
-  background: linear-gradient(180deg, #003973, #e5e5be);
+  background: linear-gradient(180deg, #393d41, #e5e5be);
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  margin: 0;            
+  padding-top: 90px;  
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+
 
 .child {
   padding: 40px;
@@ -20,7 +24,7 @@
 .form-title {
   font-size: 28px;
   font-weight: 700;
-  color: #003973;
+  color: #404549;
   margin-bottom: 30px;
 }
 
@@ -31,7 +35,7 @@ nz-form-control {
 .login-form-button {
   width: 100%;
   // padding: 12px 20px;
-  background: #003973;
+  background: #383b3d;
   border: none;
   border-radius: 6px;
   font-size: 16px;
@@ -40,7 +44,7 @@ nz-form-control {
 }
 
 .login-form-button:hover {
-  background: #00509e;
+  background: #cc861d;
   transform: scale(1.02);
 }
 
@@ -51,7 +55,7 @@ nz-form-control {
 }
 
 .redirect-text a {
-  color: #003973;
+  color: #40454b;
   font-weight: 600;
   transition: color 0.3s;
 }

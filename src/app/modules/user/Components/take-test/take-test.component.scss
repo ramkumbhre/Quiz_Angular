@@ -1,12 +1,14 @@
 .bg {
-  background: linear-gradient(135deg, #003973, #e5e5be);
+  background: linear-gradient(180deg, #374450, #e5e5be);
   width: 100%;
-   height: auto;
-  min-height: 100vh;
-  display: flex;
+  //  height: auto;
+   min-height: 110vh;
+  margin: 0;            
+  padding-top: 90px; 
+  // display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 100px;
 }
 
 .question {
@@ -49,7 +51,7 @@
 
 .option:hover {
     background: #f9f9f9;
-    border-color: #007bff;
+    border-color: #38414b;
 }
 
 .option input[type="radio"] {
@@ -63,7 +65,7 @@
     padding: 12px 20px;
     border: none;
     border-radius: 8px;
-    background: #007bff;
+    background: #38434e;
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -71,17 +73,23 @@
 } 
 
 .submit-btn:hover {
-    background: #0056b3;
+    background: #404c58;
 }
 
 
 .timer-container {
-  display: inline-block;
-  border: 2px solid #ffffff;   /* light blue border */
-  border-radius: 8px;          /* rounded corners */
-  padding: 8px 14px;           /* spacing inside */
+  position: fixed;            /* keep it fixed on screen */
+  top: 10px;                  /* distance from top */
+  left: 10px;                 /* distance from left */
+  border: 2px solid #ffffff;  /* light blue border */
+  border-radius: 8px;         /* rounded corners */
+  padding: 8px 14px;          /* spacing inside */
   font-family: Arial, sans-serif;
+  background-color: #363b46;  /* optional: add background for readability */
+  color: #5a3f3f;             /* make text visible */
+  z-index: 1000;              /* stay above other elements */
 }
+
 
 .timer {
   font-weight: bold;

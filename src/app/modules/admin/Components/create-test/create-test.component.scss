@@ -1,8 +1,10 @@
 .bg {
-  background: linear-gradient(135deg, #003973, #e5e5be);
+  background: linear-gradient(180deg, #383e44, #e5e5be);
   width: 100%;
    height: auto;
-  min-height: 100vh;
+   min-height: 110vh;
+  margin: 0;            
+  padding-top: 90px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,7 +32,7 @@
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 25px;
-  color: #003973;
+  color: #353b41;
 }
 
 .login-form {
@@ -77,7 +79,7 @@ textarea[nz-input]:focus {
   font-size: 15px;
   font-weight: 700;
   border-radius: 10px;
-  background: linear-gradient(90deg, #0b4f9b 0%, #003973 100%);
+  background: linear-gradient(90deg, #383c41 0%, #363a3f 100%);
   color: #fff;
   border: none;
   box-shadow: 0 8px 22px rgba(11, 79, 155, 0.18);

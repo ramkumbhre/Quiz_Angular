@@ -1,12 +1,14 @@
 .bg {
-  background: linear-gradient(135deg, #003973, #e5e5be);
+  background: linear-gradient(180deg, #373c41, #e5e5be);
   width: 100%;
-   height: auto;
-  min-height: 100vh;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-  padding: 60px;
+  //  height: auto;
+   min-height: 110vh;
+  margin: 0;            
+  // padding-top: 90px; 
+  // display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px;
 }
 
 // .results-dashboard {
