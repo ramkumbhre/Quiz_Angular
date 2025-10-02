@@ -14,7 +14,7 @@
 <div *ngIf="isAdminLoggedIn">
 <nz-header class="main-header sticky-header" nz-row nzType="flex">
   <div class="logo">
-    <a routerLink="/" (click)="logout()">Quiz App</a>
+    <a routerLink="/login" (click)="logout()">Quiz App</a>
   </div>
   <div class="nav-links">
     <a nz-button nzType="link" routerLink="/admin/dashboard" routerLinkActive="active">Dashboard</a>
@@ -29,7 +29,7 @@
 <div *ngIf="isUserLoggedIn">
 <nz-header class="main-header sticky-header" nz-row nzType="flex">
   <div class="logo">
-    <a routerLink="/" (click)="logout()">Quiz App</a>
+    <a routerLink="/login" (click)="logout()">Quiz App</a>
   </div>
   <div class="nav-links">
     <a nz-button nzType="link" routerLink="/user/dashboard" routerLinkActive="active">Dashboard</a>
