@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-const BASIC_URL ="https://quizbackend-production-fc51.up.railway.app/"
+const BASIC_URL ="http://65.0.207.242:8080/"
 
 @Injectable({
   providedIn: 'root'
