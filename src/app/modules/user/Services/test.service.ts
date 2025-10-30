@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { UserStorageService } from '../../auth/services/user-storage.service';
 
-const BASIC_URL ="http://65.0.207.242:8080/";
+const BASIC_URL ="https://quiz-app-15.duckdns.org/";
 
 @Injectable({
   providedIn: 'root'
